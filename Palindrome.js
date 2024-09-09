@@ -1,21 +1,13 @@
-const PalindromeNumber = function (x) {
-    let sumA  = '';
-    const splitA = x.toString().split('');
-    
-    splitA.reverse();
-    splitA.map(function(a) {
-        sumA += a;
-    });
 
-    if (parseInt(sumA) ===x) {
-        return true;
-    }else {
-        return false;
-    }
+
+var isPal = function (x) {
+    let start = x.toString();
+    let end = start.split('').reverse().join('');
+    return start === end;
 }
 
-console.log(PalindromeNumber(121));
+console.log(isPal(121))
 
-console.log(PalindromeNumber(-121));
+console.log(isPal(-121))
 
-console.log(PalindromeNumber(10));
+console.log(isPal(10))

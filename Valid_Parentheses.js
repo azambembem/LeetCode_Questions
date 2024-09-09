@@ -1,28 +1,37 @@
-// Valid Parentheses
+const isValid = (s) => {
+  const stack = [];
 
-const isValid = (x) => {
-  if (x.length % 2 !== 0) return false;
+  for (let i = 0; i < s.length; i += 1) {
+    const top = stack[stack.length - 1];
 
-  const pairs = { "{": "}", "[": "]", "(": ")" };
-  let stack = [];
+    if (s[i] === "(" || s[i] === "{" || s[i] === "[") stack.push(s[i]);
+    else if (s[i] === ")" && top === "(" && stack.length !== 0) stack.pop();
+    else if (s[i] === "]" && top === "[" && stack.length !== 0) stack.pop();
+    else if (s[i] === "}" && top === "{" && stack.length !== 0) stack.pop();
 
-  for (let i = 0; i < x.length; i++) {
-    if (x[i] === "{" || x[i] === "[" || x[i] === "(") {
-      stack.push(x[i]);
-      continue;
-    }
-
-    if (pairs[stack[stack.length - 1]] === x[i]) {
-      stack.pop();
-      continue;
-    }
     return false;
   }
+
   return stack.length === 0;
 };
 
-console.log(isValid("()"));
+console.log(isValid("()")); // true
 
-console.log(isValid("()[]{}"));
+console.log(isValid("()[]{}")); // true
 
-console.log(isValid("(]"));
+console.log(isValid("(]")); //false
+
+// String -> Array - Map, ForEach, reduce - X
+// String -> For
+
+// If else -> if - else
+// IF else -> X -> returnchecking value is pretty same
+
+// s[i] === "}"
+// s[i] === ")"
+switch (s[i]) {
+  case "}":
+    return "asas";
+  case ")":
+    return "asas";
+}

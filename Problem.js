@@ -15,3 +15,17 @@
 // console.log(sumDigits(123)); // 6
 // console.log(sumDigits(9045)); // 18
 // console.log(sumDigits(3)); // 3
+
+// const sumDigits = () => {
+//   return;
+// };
+// console.log(sumDigits());
+
+// let arr = [5, 10, 15];
+// let arr2 = arr;
+// console.log(arr2);
+// arr2[0] = 100;
+// arr[1] = 1000;
+
+// console.log(arr[0]);
+// console.log(arr2[1]);

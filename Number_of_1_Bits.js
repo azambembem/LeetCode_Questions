@@ -8,5 +8,5 @@ var hammingWeight = (n) => {
   return result;
 };
 console.log(hammingWeight(11));
-console.log(hammingWeight(128));
+console.log(hammingWeight(128)); 
 console.log(hammingWeight(2147483645));
